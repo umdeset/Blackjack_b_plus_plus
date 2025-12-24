@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9a270a01-cb92-48e7-a59f-965d810d6cc1" name="Changes" comment="first commit done by umut demirez.&#10;-changed the structure of the files. (renamed for efficient usability).&#10;-Created the Card class for the card objects which is probably the most core class in this project." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Blackjack_b_plus_plus" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;settabi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/settabi/Blackjack_b_plus_plus.git&quot;,
+    &quot;accountId&quot;: &quot;a5c69edf-8bfc-4a41-8d40-a0244e449da7&quot;
+  }
+}</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.13-bin/5xuhj0ry160q40clulazy9h7d/gradle-8.13" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/ms-21.0.8/Contents/Home" gradleVersion="8.13" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="36vdRS96nAul8o3xbAqBllcxCTM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Blackjack_b_plus_plus [:at.ac.hcw.blackjack_b_plus_plus.BlackjackApp.main()].executor": "Run",
+    "Gradle.Blackjack_b_plus_plus [:at.ac.hcw.blackjack_b_plus_plus.Launcher.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/at/ac/hcw/blackjack_b_plus_plus" />
+      <recent name="$PROJECT_DIR$/src/main/java/controller" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="at.ac.hcw.blackjack_b_plus_plus" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Launcher">
+    <configuration name="BlackjackApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="at.ac.hcw.blackjack_b_plus_plus.BlackjackApp" />
+      <module name="Blackjack_b_plus_plus.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.ac.hcw.blackjack_b_plus_plus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="at.ac.hcw.blackjack_b_plus_plus.Launcher" />
+      <module name="Blackjack_b_plus_plus.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.ac.hcw.blackjack_b_plus_plus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.BlackjackApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a270a01-cb92-48e7-a59f-965d810d6cc1" name="Changes" comment="" />
+      <created>1765890971231</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765890971231</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first commit done by umut demirez.&#10;-changed the structure of the files. (renamed for efficient usability).&#10;-Created the Card class for the card objects which is probably the most core class in this project.">
+      <option name="closed" value="true" />
+      <created>1766617754272</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1766617754272</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit done by umut demirez.&#10;-changed the structure of the files. (renamed for efficient usability).&#10;-Created the Card class for the card objects which is probably the most core class in this project." />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit done by umut demirez.&#10;-changed the structure of the files. (renamed for efficient usability).&#10;-Created the Card class for the card objects which is probably the most core class in this project." />
+  </component>
+</project>
