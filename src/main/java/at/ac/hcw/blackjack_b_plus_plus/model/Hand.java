@@ -10,7 +10,7 @@ public class Hand {
         addCard(card1);
         addCard(card2);
     }
-//da
+
     //fügt Karte hinzu wird dann in Blackjack App, Player und Dealer benötigt
     public void addCard(Card card){
         if(card.getName().equals("Ace")){
