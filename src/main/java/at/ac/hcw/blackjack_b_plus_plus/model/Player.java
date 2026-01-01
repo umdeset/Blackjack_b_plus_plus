@@ -1,18 +1,31 @@
 package at.ac.hcw.blackjack_b_plus_plus.model;
 
-public class Player {
-    private String name;
+public class Player extends Partaker {
     private int balance;
-    private Hand hand;
+    private int bet;
 
-    public Player(String name, int balance, Hand hand){
-        this.name = name;
-        this.balance = balance;
-        this.hand = hand;
+    public Player(String name, int startBalance) {
+        super(name); //ruft Konstruktor von Partaker auf
+        this.balance = startBalance;
     }
 
-    public void takeTurn(){
-        //Hit stand usw.
+    public void setBet(int placedBet) {
+        bet = placedBet;
+        balance -= placedBet;
+    }
+
+    public void win() {
+        balance += bet * 2;
+        bet = 0;
+    }
+
+    public void push() {
+        balance += bet;
+        bet = 0;
+    }
+
+    public void loose() {
+        bet = 0;
     }
 
 
