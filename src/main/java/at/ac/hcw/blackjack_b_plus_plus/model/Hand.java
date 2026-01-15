@@ -7,6 +7,9 @@ import java.util.Scanner;
 public class Hand {
     private List<Card> handCards = new ArrayList<>();
 
+    public Hand (){
+        this.handCards = new ArrayList<>();
+    }
     public Hand(Card card1, Card card2){
         addCard(card1);
         addCard(card2);
@@ -31,7 +34,9 @@ public class Hand {
 //                }
 //            }while(true);
 //        }
-        handCards.add(card);
+        if (card != null){
+            handCards.add(card);
+        }
     }
 
     //löscht die hand
@@ -62,6 +67,10 @@ public class Hand {
             aceCount--;
         }
         return sum;
+    }
+
+    public List<Card> getHandCards(){
+        return handCards;
     }
 
     @Override

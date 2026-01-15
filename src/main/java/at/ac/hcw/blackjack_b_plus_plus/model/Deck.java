@@ -52,7 +52,7 @@ public class Deck {
         if(cards.isEmpty()){
             return null;
         }
-        return cards.remove(0);  //wir können einfach die karte an der position 0
+        return cards.removeFirst();  //wir können einfach die karte an der position 0
                                         // entfernen also die oberste und brauchen keine extra methode dafür
     }
 //    public void removeCardfromDeck(Card card){
