@@ -2,11 +2,11 @@ package at.ac.hcw.blackjack_b_plus_plus.model;
 
 public abstract class Partaker {
     private String name;
-    private Hand hand;
+    protected Hand hand;
 
     public Partaker(String name){
         this.name = name;
-        Hand hand = new Hand(); //leere Hand
+        this.hand = new Hand(); //leere Hand ps von umut: this.hand nicht Hand hand. Hand hand ist nur temporary
     }
 
     public void addCardToHand(Card card){

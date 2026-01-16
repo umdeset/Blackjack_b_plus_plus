@@ -8,7 +8,7 @@ public class Hand {
     private List<Card> handCards = new ArrayList<>();
 
     public Hand (){
-        this.handCards = new ArrayList<>();
+//        this.handCards = new ArrayList<>();  //constructor muss empty bleiben
     }
     public Hand(Card card1, Card card2){
         addCard(card1);

@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9a270a01-cb92-48e7-a59f-965d810d6cc1" name="Changes" comment="first commit done by umut demirez.&#10;-changed the structure of the files. (renamed for efficient usability).&#10;-Created the Card class for the card objects which is probably the most core class in this project.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Blackjack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Blackjack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Hand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Partaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/ac/hcw/blackjack_b_plus_plus/model/Partaker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +59,12 @@
     &quot;assignee&quot;: &quot;settabi&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/settabi/Blackjack_b_plus_plus.git&quot;,
-    &quot;accountId&quot;: &quot;a5c69edf-8bfc-4a41-8d40-a0244e449da7&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/umdeset/Blackjack_b_plus_plus.git",
+    "accountId": "a5c69edf-8bfc-4a41-8d40-a0244e449da7"
   }
-}</component>
+}]]></component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.13-bin/5xuhj0ry160q40clulazy9h7d/gradle-8.13" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-21.0.8-1/Contents/Home" gradleVersion="8.13" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -80,9 +80,10 @@
     "Gradle.Blackjack_b_plus_plus [:at.ac.hcw.blackjack_b_plus_plus.Launcher.main()].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "27__12__25__00__10__demirez",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }

@@ -7,12 +7,12 @@ import java.util.Objects;
 
 public class Deck {
     private List<Card> cards = new ArrayList<>();
-    private int topCard;
+//    private int topCard;
 //    private final int numberOfCardsOneDeck = 52; Unnötig da ein deck wenn es fertig erstellt ist eh automatisch 52 karten hat
 
     private final String[] SUITE = {"Spades", "Diamonds", "Hearts", "Clubs"};
-    private final int[] VALUE = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
-    private final String[] NAMES = {"2","3", "4", "5", "6", "7", "8", "9", "10", "King", "Queen", "Jack", "Ace"};
+    private final int[] VALUE = {    2,   3,   4,   5,   6,   7,   8,   9,   10,    10,     10,      10,     11,};
+    private final String[] NAMES = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "King", "Queen", "Jack", "Ace"};
     // i typed in the int array the value 10 4 times for each name that it could be.
     // the reason is I wanted these arrays to be parallel (same length) so we can use one
     // index going up by 1 and hit all the cards
@@ -26,6 +26,7 @@ public class Deck {
                 for (int j=0; j<NAMES.length; j++){
                     String currentName = NAMES[j];
                     int currentValue=VALUE[j];
+
                     Card newCard = new Card(suiteCurrent, currentName, currentValue);//karten objekt erstellen mit den aktuellen werten,zeichen
                     cards.add(newCard); //jede karte die wir erstellen packen wir direkt in die liste bevor wir eine andere erstellen.
                 }
@@ -55,9 +56,10 @@ public class Deck {
         return cards.removeFirst();  //wir können einfach die karte an der position 0
                                         // entfernen also die oberste und brauchen keine extra methode dafür
     }
-//    public void removeCardfromDeck(Card card){
-//        cards.remove(card);
-//    }
+
+    public void removeCardFromDeck(Card card){
+        cards.remove(card);
+    }
 
     @Override
     public String toString() {
