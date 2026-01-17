@@ -5,10 +5,10 @@ public class Blackjack {
     private Player player;
     private Dealer dealer;
 
-    public Blackjack (String playerName, int startBalance){
+    public Blackjack (Player player, Dealer dealer){
         this.deck = new Deck(6); // creating a big deck with 6 decks.
-        this.player = new Player(playerName, startBalance);
-        this.dealer = new Dealer("Dealer");
+        this.player = player; //player wird davor schon erstellt
+        this.dealer = dealer;
     }
 
     //start of the game
@@ -17,7 +17,7 @@ public class Blackjack {
         dealer.reset();
         //reseting the hand form the previous round
 
-        player.setBet(betAmount); //bet amount nehmen
+//        player.setBet(betAmount); player muss zuerst bet setten
 
 
         //karten verteilen
@@ -44,8 +44,8 @@ public class Blackjack {
     }
 
     private void determineWinner(){
-        int playerScore = player.getScore();
-        int dealerScore = dealer.getScore();
+        int playerScore = player.getValue();
+        int dealerScore = dealer.getValue();
         //case 1: dealer busted also >21
         if (dealerScore>21){
             player.win();

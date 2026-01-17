@@ -13,12 +13,12 @@ public abstract class Partaker {
         hand.addCard(card);
     }
 
-    public int getScore(){
+    public int getValue(){
         return hand.calculateHand();
     }
 
     public boolean isOver21(){
-        return getScore() > 21;
+        return getValue() > 21;
     }
 
     public void reset(){

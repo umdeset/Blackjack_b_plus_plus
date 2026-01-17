@@ -3,12 +3,71 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="298.0" prefWidth="118.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.hcw.blackjack_b_plus_plus.controller.MenuController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-    <Button onAction="#onHelloButtonClick" prefHeight="49.0" prefWidth="63.0" text="Hello!" />
+<StackPane xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="at.ac.hcw.blackjack_b_plus_plus.controller.BlackjackController">
 
-    <Label fx:id="welcomeText" />
-</VBox>
+    <children>
+        <VBox fx:id="StartMenu" alignment="CENTER" spacing="30.0" style="-fx-background-color: #8c92ac;">
+            <children>
+                <Label text="Welcome to b++'s Blackjack" textFill="GOLD">
+                    <font><Font name="System Bold" size="48.0"/></font>
+                </Label>
+                <VBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Button prefWidth="200.0" text="Rules" onAction="#switchToRulesMenu"/>
+                        <Button prefWidth="200.0" text="Start Game" onAction="#startPreGameMenu"/>
+                        <Button prefWidth="200.0" text="Exit" onAction="#exitGame"/>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox fx:id="PreGameMenu" alignment="CENTER" spacing="30.0" style="-fx-background-color: #8c92ac;" visible="false">
+            <children>
+                <Region VBox.vgrow="ALWAYS"/>
+                <Label text="Balance: "/>
+                <Label fx:id="balanceLabel" text="0" />
+                <Label text="Bet: "/>
+                <Label fx:id="betLabel" text="0" />
+                <TextField fx:id="betInput" maxWidth="300.0" onAction="#setBet"/>
+                <VBox alignment="BOTTOM_RIGHT" spacing="15.0">
+                    <children>
+                        <Button onAction="#allIn" prefWidth="200.0" text="All in"/>
+                        <Button onAction="#startRound" prefWidth="200.0" text="Start"/>
+                        <Button onAction="#clearBet" prefWidth="200.0" text="Clear"/>
+                        <Button onAction="#switchToStartMenu" prefWidth="200.0" text="Back"/>
+                    </children>
+                    <padding><Insets bottom="20.0" right="100.0"/></padding>
+                </VBox>
+            </children>
+        </VBox>
+
+        <VBox fx:id="RulesMenu" alignment="CENTER" spacing="30.0" style="-fx-background-color: #8c92ac;" visible="false">
+            <children>
+                <Label text="Rules" textFill="GOLD">
+                    <font><Font name="System Bold" size="48.0"/></font>
+                </Label>
+                <Button prefWidth="200.0" text="Back" onAction="#switchToStartMenu"/>
+            </children>
+        </VBox>
+
+        <VBox fx:id="GameMenu" alignment="CENTER" spacing="30.0" style="-fx-background-color: #8c92ac;" visible="false">
+            <Label text="Bet: "/>
+            <Label fx:id="betLabel2" text="0" />
+            <HBox fx:id="dealerHand" alignment="CENTER" spacing="-40.0" prefHeight="150.0">
+                <padding>
+                    <Insets bottom="20.0" top="20.0"/>
+                </padding>
+            </HBox>
+            <HBox fx:id="playerHand" alignment="CENTER" spacing="-40.0" prefHeight="150.0">
+                <padding>
+                    <Insets bottom="20.0" top="20.0"/>
+                </padding>
+            </HBox>
+            <Label fx:id="asd"/>
+            <Label fx:id="playerHandValueLabel" text="0"> </Label>
+        </VBox>
+    </children>
+</StackPane>
