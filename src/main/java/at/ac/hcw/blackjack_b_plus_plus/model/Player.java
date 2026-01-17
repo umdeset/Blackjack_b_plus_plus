@@ -10,8 +10,15 @@ public class Player extends Partaker {
     }
 
     public void setBet(int placedBet) {
-        bet = placedBet;
-        balance -= placedBet;
+        if(balance >= placedBet && placedBet >= 0){
+            bet = placedBet;
+            balance -= placedBet;
+        }
+    }
+
+    public void clearBet() {
+        balance += bet;
+        bet = 0;
     }
 
     public void win() {
@@ -22,6 +29,14 @@ public class Player extends Partaker {
     public void push() {
         balance += bet;
         bet = 0;
+    }
+
+    public int getBalance(){
+        return balance;
+    }
+
+    public int getBet(){
+        return bet;
     }
 
     public void loose() {

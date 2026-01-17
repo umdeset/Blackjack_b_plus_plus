@@ -10,9 +10,9 @@ public class Deck {
 //    private int topCard;
 //    private final int numberOfCardsOneDeck = 52; Unnötig da ein deck wenn es fertig erstellt ist eh automatisch 52 karten hat
 
-    private final String[] SUITE = {"Spades", "Diamonds", "Hearts", "Clubs"};
+    private final String[] SUITE = {"spades", "diamonds", "hearts", "clubs"};
     private final int[] VALUE = {    2,   3,   4,   5,   6,   7,   8,   9,   10,    10,     10,      10,     11,};
-    private final String[] NAMES = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "King", "Queen", "Jack", "Ace"};
+    private final String[] NAMES = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "king", "queen", "jack", "ace"};
     // i typed in the int array the value 10 4 times for each name that it could be.
     // the reason is I wanted these arrays to be parallel (same length) so we can use one
     // index going up by 1 and hit all the cards

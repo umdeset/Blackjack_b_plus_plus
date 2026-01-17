@@ -39,6 +39,14 @@ public class Hand {
         }
     }
 
+    public String getCard(int pos){
+        return handCards.get(pos).getName() + "_" + handCards.get(pos).getSymbol();
+    }
+
+    public List<Card> getCards(){
+        return handCards;
+    }
+
     //löscht die hand
     public void clearHand(){
         handCards.clear();
