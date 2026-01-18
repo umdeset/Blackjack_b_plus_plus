@@ -17,6 +17,10 @@ public abstract class Partaker {
         return hand.calculateHand();
     }
 
+    public int getScore(){
+        return hand.calculateHand();
+    }
+
     public boolean isOver21(){
         return getValue() > 21;
     }

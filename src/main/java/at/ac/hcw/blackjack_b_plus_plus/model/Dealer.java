@@ -2,9 +2,9 @@ package at.ac.hcw.blackjack_b_plus_plus.model;
 
 public class Dealer extends Partaker{
 
-    public Dealer() {
+    public Dealer(String name) {
         super("Dealer");
-    }
+    } //name mitgegeben damit wir später keine probleme haben beim adden von anderen dealer
 
     //Dealer logik umut kennt sich besser aus
     private double badLuckFactor = 0.0; // Beeinflusst durch Trinkgeld

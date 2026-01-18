@@ -27,9 +27,13 @@ public class Card {
         return symbol;
     }
 
+    public String getImageName(){  // konvertiert Symbol="Hearts" und Name="King" in "hearts_king.png" um
+        return symbol.toLowerCase() + "_" + name.toLowerCase() + ".png";
+    }
+
     public void setValue(int value){
         this.value = value;
-    }
+    }//wofür?
 
     @Override
     public String toString() {

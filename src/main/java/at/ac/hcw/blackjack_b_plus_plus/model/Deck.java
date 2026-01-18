@@ -53,13 +53,13 @@ public class Deck {
         if(cards.isEmpty()){
             return null;
         }
-        return cards.removeFirst();  //wir können einfach die karte an der position 0
+        return cards.remove(0);  //wir können einfach die karte an der position 0
                                         // entfernen also die oberste und brauchen keine extra methode dafür
     }
 
-    public void removeCardFromDeck(Card card){
-        cards.remove(card);
-    }
+//    public void removeCardFromDeck(Card card){
+//        cards.remove(card);
+//    }  brauchen wir nicht die karte wird in dealCards methode sowieso entfernt
 
     @Override
     public String toString() {

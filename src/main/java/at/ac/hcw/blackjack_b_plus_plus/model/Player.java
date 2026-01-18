@@ -16,10 +16,10 @@ public class Player extends Partaker {
         }
     }
 
-    public void clearBet() {
-        balance += bet;
-        bet = 0;
-    }
+//    public void clearBet() {
+//        balance += bet;
+//        bet = 0;
+//    } brauchen wir nicht weil wenn wir in controller auf clear drücken wird die currentBet auf 0 gesetzt einfach
 
     public void win() {
         balance += bet * 2;
