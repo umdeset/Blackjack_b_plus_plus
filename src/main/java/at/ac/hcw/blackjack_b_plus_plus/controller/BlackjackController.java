@@ -5,10 +5,10 @@ import at.ac.hcw.blackjack_b_plus_plus.model.Card;
 import at.ac.hcw.blackjack_b_plus_plus.model.Dealer;
 import at.ac.hcw.blackjack_b_plus_plus.model.Player;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,6 +16,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.util.Stack;
 
@@ -37,6 +39,10 @@ public class BlackjackController {
     public ImageView btnChangeSkinRight;
     @FXML
     public ImageView btnChangeSkinLeft;
+    @FXML
+    public Slider volumeSlider;
+    @FXML
+    public ImageView btnMute;
     @FXML
     private AnchorPane menuPane;
     @FXML
@@ -106,6 +112,8 @@ public class BlackjackController {
         bettingGroup.setVisible(true);
         gameOverGroup.setVisible(false);
         resultLabel.setVisible(false);
+        backgroundMusic();
+        sliderVolume();
 
 
         // Menü
@@ -127,13 +135,14 @@ public class BlackjackController {
             rulesPane2.setVisible(false);
             rulesPane1.setVisible(true);
         });
+
+        //Skin ändern
         btnChangeSkinRight.setOnMouseClicked(e -> {
             if (currentDealerSkin < countDealerSkins()) {
                 currentDealerSkin++;
                 updateDealerSkin();
             }
         });
-
         btnChangeSkinLeft.setOnMouseClicked(e -> {
             if (currentDealerSkin > 1) {
                 currentDealerSkin--;
@@ -176,6 +185,18 @@ public class BlackjackController {
         btnLeave.setOnMouseClicked(e -> {
             tempBetAmount = 0;
             switchToStartMenu();
+        });
+
+        btnMute.setOnMouseClicked(e -> {
+            if(mediaPlayer.isMute()){
+                mediaPlayer.setMute(false);
+                muteButtonImage = "unmute.png";
+                updateMuteButton();
+            }else{
+                mediaPlayer.setMute(true);
+                muteButtonImage = "mute.png";
+                updateMuteButton();
+            }
         });
     }
 
@@ -471,5 +492,41 @@ public class BlackjackController {
             }
         }
         return count;
+    }
+
+    private MediaPlayer mediaPlayer;
+    private void backgroundMusic(){
+        var resource = getClass().getResource("/at/ac/hcw/blackjack_b_plus_plus/Music/Background_Music.wav");
+
+        if(resource == null){
+            System.err.println("Musikfile nicht gefunden");
+            return;
+        }
+        //Pfad in benötigte "External Form" oder auch Uri umwandeln
+        String uri = resource.toExternalForm();
+
+        //Media und Mediaplayer erstellen
+        Media media = new Media(uri);
+        mediaPlayer = new MediaPlayer(media);
+
+        mediaPlayer.setVolume(0.10);
+
+        //Endlosschleife
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+
+        mediaPlayer.play();
+    }
+
+    private void sliderVolume(){
+        if(mediaPlayer != null){
+            mediaPlayer.volumeProperty().bind(volumeSlider.valueProperty());
+        }
+    }
+
+    private String muteButtonImage = "unmute.png";
+    public void updateMuteButton() {
+        String path = "/at/ac/hcw/blackjack_b_plus_plus/images/" + muteButtonImage;
+        Image newSkin = new Image(getClass().getResourceAsStream(path));
+        btnMute.setImage(newSkin);
     }
 }

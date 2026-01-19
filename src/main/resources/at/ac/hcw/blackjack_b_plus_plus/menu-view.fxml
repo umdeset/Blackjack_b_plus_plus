@@ -494,6 +494,18 @@
                             </image>
                         </ImageView>
 
+                        <HBox spacing="10" alignment="TOP_RIGHT" pickOnBounds="true" translateY="350" translateX="-50">
+                            <ImageView fx:id="btnMute" fitWidth="100.0" fitHeight="100.0" scaleX="0.4" scaleY="0.4" translateX="20" translateY="-40" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@images/unmute.png"/>
+                                </image>
+                                <cursor>
+                                    <Cursor fx:constant="HAND"/>
+                                </cursor>
+                            </ImageView>
+                            <Slider fx:id="volumeSlider" min="0.0" max="1.0" value="0.5" maxWidth="200.0" showTickMarks="false" />
+                        </HBox>
+
                         <VBox alignment="CENTER" spacing="10.0" translateY="-20.0" pickOnBounds="false">
                             <children>
                                 <Label text="Player Name:" textFill="white">
