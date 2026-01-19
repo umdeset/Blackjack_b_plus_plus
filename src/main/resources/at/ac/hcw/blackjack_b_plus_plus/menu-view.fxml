@@ -50,6 +50,7 @@
                             <children>
                                 <StackPane prefHeight="800.0" prefWidth="1280.0" pickOnBounds="false">
                                     <children>
+                                        <Label fx:id="playerBetLabel" text="Current Bet: 0" translateY="10" textFill="white"><font><Font name="Times New Roman" size="24.0" /></font><effect><DropShadow color="#000000a6"/></effect></Label>
                                         <ImageView fitWidth="1280.0" scaleX="0.3" scaleY="0.3" translateY="100.0" pickOnBounds="false" preserveRatio="true"><image><Image url="@images/Place_down_bet_circle_text.png" /></image></ImageView>
                                         <StackPane fx:id="betStack" maxHeight="120.0" maxWidth="120.0" translateY="125.0" pickOnBounds="true"><cursor><Cursor fx:constant="HAND" /></cursor></StackPane>
                                         <StackPane pickOnBounds="false">

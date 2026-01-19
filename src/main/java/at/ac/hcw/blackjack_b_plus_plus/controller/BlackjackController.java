@@ -20,6 +20,7 @@ import java.util.Stack;
 
 public class BlackjackController {
 
+    @FXML public Label playerBetLabel;
     @FXML private AnchorPane StartMenu;
     @FXML private AnchorPane RulesMenu;
     @FXML private AnchorPane GameMenu;
@@ -271,6 +272,7 @@ public class BlackjackController {
                 betHistory.push(value);
                 addChipToTableVisual(value);
             }
+            updateCurrentBet();
         });
     }
 
@@ -282,6 +284,7 @@ public class BlackjackController {
             placedChip.setPreserveRatio(true);
             placedChip.setOnMouseClicked(e -> { e.consume(); removeTopChip(); });
             betStack.getChildren().add(placedChip);
+            updateCurrentBet();
         } catch (Exception e) {}
     }
 
@@ -299,6 +302,7 @@ public class BlackjackController {
         tempBetAmount = 0;
         betHistory.clear();
         betStack.getChildren().clear();
+        updateCurrentBet();
     }
 
     private void removeTopChip() {
@@ -306,6 +310,7 @@ public class BlackjackController {
             tempBetAmount -= betHistory.pop();
             if (!betStack.getChildren().isEmpty()) betStack.getChildren().remove(betStack.getChildren().size() - 1);
         }
+        updateCurrentBet();
     }
 
     public void updateBalanceLabel() {
@@ -327,5 +332,9 @@ public class BlackjackController {
     public void exitGame() {
         Platform.exit();
         System.exit(0);
+    }
+
+    public void updateCurrentBet() {
+        playerBetLabel.setText("Current Bet: " + tempBetAmount);
     }
 }
