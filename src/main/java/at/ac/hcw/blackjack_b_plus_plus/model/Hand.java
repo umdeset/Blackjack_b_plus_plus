@@ -42,6 +42,7 @@ public class Hand {
     public String getCard(int pos){
         return handCards.get(pos).getName() + "_" + handCards.get(pos).getSymbol();
     }
+    public int getCardValue(int pos){return handCards.get(pos).getValue();}
 
     public List<Card> getCards(){
         return handCards;

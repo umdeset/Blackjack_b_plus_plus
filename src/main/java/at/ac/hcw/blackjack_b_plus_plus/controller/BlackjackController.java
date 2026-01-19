@@ -159,8 +159,8 @@ public class BlackjackController {
         btnStand.setOnMouseClicked(e -> standButton());
 
         // Game Over
-        btnPlayAgain.setOnMouseClicked(e -> onPlayAgainClicked());
-        btnLeave.setOnMouseClicked(e -> switchToStartMenu());
+        btnPlayAgain.setOnMouseClicked(e -> {tempBetAmount = 0; onPlayAgainClicked();});
+        btnLeave.setOnMouseClicked(e -> {tempBetAmount = 0; switchToStartMenu();});
     }
 
     private void initGame() {
@@ -227,6 +227,7 @@ public class BlackjackController {
     @FXML
     protected void onDealButtonClicked() {
         if (tempBetAmount > 0 && tempBetAmount <= player.getBalance()) {
+            updateCurrentBet();
             blackjack.startRound(tempBetAmount);
 
             bettingGroup.setVisible(false);
@@ -251,6 +252,7 @@ public class BlackjackController {
     @FXML
     protected void onPlayAgainClicked() {
         tempBetAmount = 0;
+        updateCurrentBet();
         betHistory.clear();
         betStack.getChildren().clear();
 
@@ -404,7 +406,7 @@ public class BlackjackController {
 
     public void updateHandValue() {
         playerHandValue.setText("Player Hand: \n" + player.getValue());
-        dealerHandValue.setText("Dealer Hand: \n" + player.getValue());
+        dealerHandValue.setText("Dealer Hand: \n" + (dealer.getValue() - dealer.getHand().getCardValue(1)));
     }
 
     public void updateDealerSkin() {
